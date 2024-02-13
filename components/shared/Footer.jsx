@@ -45,44 +45,43 @@ export default function Footer() {
                 </span>
               </li>
 
-              <li className="footer-link">
-                <div className="h-6 w-6 relative">
-                  <Image
-                    src="/assets/snapchat-primary.svg"
-                    alt="snapchat"
-                    fill
-                  />
-                </div>
-                <span className="text-gray-300 text-small-semibold">
-                  XXXXXXX
-                </span>
-              </li>
+              <ul className="flex items-center gap-10">
+                <li className="footer-link">
+                  <Link
+                    href="https://www.snapchat.com/"
+                    className="h-6 w-6 relative">
+                    <Image
+                      src="/assets/snapchat-primary.svg"
+                      alt="snapchat"
+                      fill
+                    />
+                  </Link>
+                </li>
 
-              <li className="footer-link">
-                <div className="h-6 w-6 relative">
-                  <Image
-                    src="/assets/instagram-primary.svg"
-                    alt="instagram"
-                    fill
-                  />
-                </div>
-                <span className="text-gray-300 text-small-semibold">
-                  alnahdakw
-                </span>
-              </li>
+                <li className="footer-link">
+                  <Link
+                    href="https://www.instagram.com/"
+                    className="h-6 w-6 relative">
+                    <Image
+                      src="/assets/instagram-primary.svg"
+                      alt="instagram"
+                      fill
+                    />
+                  </Link>
+                </li>
 
-              <li className="footer-link">
-                <div className="h-6 w-6 relative">
-                  <Image
-                    src="/assets/facebook-primary.svg"
-                    alt="facebook"
-                    fill
-                  />
-                </div>
-                <span className="text-gray-300 text-small-semibold">
-                  XXXXXXX
-                </span>
-              </li>
+                <li className="footer-link">
+                  <Link
+                    href="https://www.facebook.com/"
+                    className="h-6 w-6 relative">
+                    <Image
+                      src="/assets/facebook-primary.svg"
+                      alt="facebook"
+                      fill
+                    />
+                  </Link>
+                </li>
+              </ul>
             </ul>
           </div>
           {/* Contact */}

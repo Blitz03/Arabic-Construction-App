@@ -49,7 +49,7 @@ export default function Contact() {
                 </div>
 
                 <textarea
-                  className="bg-transparent border-[1px] border-secondary-900 rounded-[5px] p-3 placeholder:text-secondary-900"
+                  className="bg-transparent resize-none border-[1px] border-secondary-900 rounded-[5px] p-3 placeholder:text-secondary-900 text-gray-200 focus:outline-none"
                   placeholder="أكتب رسالتك"
                   rows={10}
                 />
