@@ -96,7 +96,7 @@
 }
 
 .contact-input {
-  @apply bg-transparent border-0 placeholder:text-secondary-900 py-5;
+  @apply bg-transparent border-0 placeholder:text-secondary-900 text-gray-200 focus:outline-none py-5;
 }
 
 .social-bar {
