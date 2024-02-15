@@ -22,8 +22,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="ar" dir="rtl">
       <Head>
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} key="desc" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={addBusinessJsonLd()}
