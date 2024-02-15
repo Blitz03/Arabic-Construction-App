@@ -54,7 +54,7 @@ export default function Contact() {
                   rows={10}
                 />
 
-                <ButtonComponent content="أرسل" type="submit" />
+                <ButtonComponent content="أرسل" />
               </form>
             </div>
           </div>

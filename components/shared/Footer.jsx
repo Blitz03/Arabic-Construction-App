@@ -11,39 +11,46 @@ export default function Footer() {
           <div>
             <h3 className="text-h2-mobile-bold text-white mb-5">أتصل بنا</h3>
 
-            <ul className="flex flex-col gap-7 items-center md:items-start">
-              <li className="footer-link">
-                <div className="h-6 w-6 relative">
-                  <Image src="/assets/call-primary.svg" alt="call" fill />
-                </div>
-                <span className="text-gray-300 text-small-semibold">
-                  50464650
-                </span>
-              </li>
+            {/* Contact Links Wrapper */}
+            <div className="flex flex-col gap-5">
+              <ul className="flex flex-col gap-7 items-center md:items-start">
+                <li className="footer-link">
+                  <div className="h-6 w-6 relative">
+                    <Image src="/assets/call-primary.svg" alt="call" fill />
+                  </div>
+                  <span className="text-gray-300 text-small-semibold">
+                    50464650
+                  </span>
+                </li>
 
-              <li className="footer-link">
-                <div className="h-6 w-6 relative">
-                  <Image src="/assets/message-primary.svg" alt="message" fill />
-                </div>
-                <span className="text-gray-300 text-small-semibold">
-                  fatehalden6@gmail.com
-                </span>
-              </li>
+                <li className="footer-link">
+                  <div className="h-6 w-6 relative">
+                    <Image
+                      src="/assets/message-primary.svg"
+                      alt="message"
+                      fill
+                    />
+                  </div>
+                  <span className="text-gray-300 text-small-semibold">
+                    fatehalden6@gmail.com
+                  </span>
+                </li>
 
-              <li className="footer-link">
-                <div className="h-6 w-6 relative">
-                  <Image
-                    src="/assets/location-primary.svg"
-                    alt="location"
-                    fill
-                  />
-                </div>
-                <span className="text-gray-300 text-small-semibold">
-                  الضجيج - مجمع بوبيان -
-                  <br />
-                  مبنى رقم 72 - ميزانين مكتب رقم 28
-                </span>
-              </li>
+                <li className="footer-link">
+                  <div className="h-6 w-6 relative">
+                    <Image
+                      src="/assets/location-primary.svg"
+                      alt="location"
+                      fill
+                    />
+                  </div>
+                  <span className="text-gray-300 text-small-semibold">
+                    الضجيج - مجمع بوبيان -
+                    <br />
+                    مبنى رقم 72 - ميزانين مكتب رقم 28
+                  </span>
+                </li>
+              </ul>
 
               <ul className="flex items-center gap-10">
                 <li className="footer-link">
@@ -82,8 +89,9 @@ export default function Footer() {
                   </Link>
                 </li>
               </ul>
-            </ul>
+            </div>
           </div>
+          {/* Contact Links Wrapper */}
           {/* Contact */}
 
           {/* Services */}
@@ -171,7 +179,7 @@ export default function Footer() {
       {/* Main Footer */}
 
       {/* Rights */}
-      <div className="bg-primary-500 py-4 text-white text-base-medium text-center">
+      <div className="bg-primary-500 py-4 text-secondary-950 text-base-medium text-center">
         © 2024 - جميع الحقوق محفوظة
       </div>
       {/* Rights */}

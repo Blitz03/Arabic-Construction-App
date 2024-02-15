@@ -20,7 +20,7 @@ export default function Works() {
         <Tabs
           defaultValue="all"
           className="w-full flex flex-col items-center gap-10">
-          <TabsList className="rounded-full py-8 sm:py-10 px-2 w-full xs:w-auto justify-start xs:justify-center">
+          <TabsList className="rounded-full py-8 sm:py-10 px-2 w-full xs:w-auto justify-start xs:justify-center bg-gray-200 text-gray-600">
             <TabsTrigger value="all" className="rounded-full p-3 sm:p-5">
               الكل
             </TabsTrigger>
@@ -90,7 +90,11 @@ export default function Works() {
         {/* Tabs */}
 
         {works.length > 0 && (
-          <ButtonComponent className="mt-12" content="رؤية المزيد" />
+          <ButtonComponent
+            className="mt-12"
+            content="رؤية المزيد"
+            type="button-secondary"
+          />
         )}
       </div>
     </section>

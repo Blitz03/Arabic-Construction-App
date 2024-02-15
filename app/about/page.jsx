@@ -21,7 +21,7 @@ export default function Page() {
             <span className="text-h1-mobile-bold sm:text-h1-bold text-primary-500">
               شركة
             </span>{" "}
-            مؤسسة النهضة للتجارة والمقاولات العامة
+            مؤسسة النهضة للتجارة والمقاولات العامة في الكويت
           </h2>
 
           <h3 className="text-h3-semibold mt-10 sm:text-gray-700 max-w-[500px]">
@@ -103,7 +103,7 @@ export default function Page() {
             <a
               className="text-primary-500 hover:text-primary-500/90"
               href="/Al-Nahda_company_profile.pdf"
-              download>
+              target="_blank">
               <strong>رؤية المزيد</strong>
             </a>
           </p>

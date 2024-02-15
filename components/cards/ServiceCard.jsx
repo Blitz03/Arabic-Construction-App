@@ -7,7 +7,7 @@ export default function ServiceCard({ service }) {
       <div className="h-[230px] w-full md:w-[360px] relative">
         <Image
           src={service.imageUrl}
-          alt={service.title}
+          alt={service.alt}
           fill
           className="object-cover rounded-[20px]"
         />
@@ -16,7 +16,7 @@ export default function ServiceCard({ service }) {
 
       {/* Text Wrapper */}
       <div>
-        <h4 className="text-body-semibold pb-2">{service.title}</h4>
+        <h3 className="text-body-semibold pb-2">{service.title}</h3>
 
         <p className="paragraph">{service.description}</p>
       </div>

@@ -1,19 +1,14 @@
 import Link from "next/link";
 
-export default function ButtonComponent({
-  content,
-  href,
-  className,
-  type = "button",
-}) {
+export default function ButtonComponent({ content, href, className }) {
   return href ? (
     <Link href={href}>
-      <button className={`${className && className} button-primary`}>
+      <button className={`button-primary${className ? " " + className : ""}`}>
         {content}
       </button>
     </Link>
   ) : (
-    <button className={`${className && className} button-primary`} type={type}>
+    <button className={`button-primary${className ? " " + className : ""}`}>
       {content}
     </button>
   );

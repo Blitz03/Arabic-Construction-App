@@ -11,7 +11,7 @@ export default function Header() {
           <Link href="/" className="text-secondary-950 text-base-semibold">
             <Image
               src="/assets/logo.png"
-              alt="logo"
+              alt="شعار شركة النهضة للبناء في الكويت"
               width={96}
               height={96}
               className="object-contain"

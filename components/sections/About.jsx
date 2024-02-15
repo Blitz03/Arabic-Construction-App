@@ -13,7 +13,7 @@ export default function About() {
           <div className="about-image_wrapper">
             <Image
               src="/assets/about-01.jpg"
-              alt="about"
+              alt="حول شركة النهضة للبناء في الكويت"
               fill
               className="object-cover rounded-[20px]"
             />
@@ -24,7 +24,7 @@ export default function About() {
               <span className="text-h1-mobile-bold sm:text-h1-bold text-primary-500">
                 شركة
               </span>{" "}
-              مؤسسة النهضة للتجارة والمقاولات العامة
+              مؤسسة النهضة للتجارة والمقاولات العامة في الكويت
             </h2>
 
             <p className="paragraph mt-8">

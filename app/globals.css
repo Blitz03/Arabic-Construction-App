@@ -80,7 +80,7 @@
 }
 
 .button-primary {
-  @apply min-h-[50px] min-w-[148px] sm:min-w-[170px] bg-primary-500 hover:bg-primary-500/90 transition-all text-base-semibold text-white rounded-[20px];
+  @apply min-h-[50px] min-w-[148px] sm:min-w-[170px] bg-primary-500 hover:bg-primary-500/90 transition-all text-body-semibold text-white rounded-[20px];
 }
 
 .about-image_wrapper {
