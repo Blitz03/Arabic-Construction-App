@@ -179,7 +179,7 @@ export default function Footer() {
       {/* Main Footer */}
 
       {/* Rights */}
-      <div className="bg-primary-500 py-4 text-secondary-950 text-base-medium text-center">
+      <div className="bg-primary-500 py-4 text-white text-base-medium text-center">
         © 2024 - جميع الحقوق محفوظة
       </div>
       {/* Rights */}
