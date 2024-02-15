@@ -1,4 +1,3 @@
-import Head from "next/head";
 import { Cairo as FontSans } from "next/font/google";
 import "./globals.css";
 
