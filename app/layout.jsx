@@ -1,9 +1,10 @@
+import Head from "next/head";
 import { Cairo as FontSans } from "next/font/google";
 import "./globals.css";
 
 import Header from "@/components/shared/Header";
 import Footer from "@/components/shared/Footer";
-import { cn } from "@/lib/utils";
+import { addBusinessJsonLd, cn } from "@/lib/utils";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -20,6 +21,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ar" dir="rtl">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={addBusinessJsonLd()}
+          key="localbusiness-jsonld"
+        />
+      </head>
+
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
