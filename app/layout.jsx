@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={addBusinessJsonLd()}
+          dangerouslySetInnerHTML={{ __html: addBusinessJsonLd() }}
           key="localbusiness-jsonld"
         />
       </head>
