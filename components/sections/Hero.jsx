@@ -10,7 +10,7 @@ export default function Hero() {
           <h1 className="text-white text-h1-mobile-bold sm:text-h1-bold max-w-[474px]">
             النهضة: الشركة الرائدة في مجال البناء في الكويت
           </h1>
-          <ButtonComponent href="#works" content="أنظر الى المزيد" />
+          <ButtonComponent href="#works" text="أنظر الى المزيد" />
         </div>
         {/* Content Wrapper */}
 

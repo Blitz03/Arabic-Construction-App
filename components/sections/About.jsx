@@ -36,7 +36,7 @@ export default function About() {
             </p>
 
             <ButtonComponent
-              content="أنظر الى المزيد"
+              text="أنظر الى المزيد"
               className="z-1 mt-8"
               href="/about"
             />

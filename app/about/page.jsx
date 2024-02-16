@@ -1,14 +1,6 @@
 import ButtonComponent from "@/components/shared/ButtonComponent";
 import Subheader from "@/components/shared/Subheader";
-import {
-  Table,
-  TableBody,
-  TableCaption,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
+import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
 
 export default function Page() {
   return (
@@ -109,7 +101,7 @@ export default function Page() {
           </p>
 
           <ButtonComponent
-            content="تواصل معنا"
+            text="تواصل معنا"
             className="z-1 mt-8"
             href="/#contact"
           />

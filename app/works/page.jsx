@@ -1,21 +1,49 @@
-import WorkCard from "../cards/WorkCard";
-import ButtonComponent from "../shared/ButtonComponent";
-import Subheader from "../shared/Subheader";
-import { works } from "@/constants";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+"use client";
 
-export default function Works() {
+import { useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
+
+import WorkCard from "@/components/cards/WorkCard";
+import Subheader from "@/components/shared/Subheader";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { works } from "@/constants";
+
+export default function Page() {
+  const [items, setItems] = useState(works.slice(0, 6));
+  const [hasMore, setHasMore] = useState(true);
+  const [page, setPage] = useState(1);
+
+  const { ref, inView } = useInView();
+
   const blackframeWorks = works.filter((work) => work.type === "blackframe");
   const turnkeyWorks = works.filter((work) => work.type === "turnkey");
   const renovationsWorks = works.filter((work) => work.type === "renovations");
   // const fearuredWorks = works.filter((work) => work.isFeatured === true);
 
+  useEffect(() => {
+    if (inView && hasMore) {
+      const newPage = page + 1;
+      showMoreItems(newPage);
+      setPage(newPage);
+    }
+  }, [inView]);
+
+  const showMoreItems = (page) => {
+    setTimeout(() => {
+      const newItems = works.slice((page - 1) * 6, page * 6);
+
+      setItems([...items, ...newItems]);
+
+      if (newItems.length === 0) {
+        setHasMore(false); // No more data to load
+      }
+    }, 1000); // Simulated delay
+  };
+
   return (
-    <section id="works">
-      <div className="container text-center">
-        {/* Subheading */}
-        <Subheader text="أعمالنا" className="mt-16" />
-        {/* Subheading */}
+    <div className="min-h-screen">
+      <div className="container">
+        <Subheader text="أعمالنا" />
 
         {/* Tabs */}
         <Tabs
@@ -43,7 +71,7 @@ export default function Works() {
 
           <TabsContent value="all" className="w-full">
             <div className="flex flex-col flex-wrap justify-center sm:flex-row gap-10">
-              {works.slice(0, 6).map((work, index) => (
+              {items.map((work, index) => (
                 <WorkCard key={index} work={work} />
               ))}
             </div>
@@ -54,7 +82,7 @@ export default function Works() {
 
           <TabsContent value="blackframe">
             <div className="flex flex-col flex-wrap justify-center sm:flex-row gap-10">
-              {blackframeWorks.slice(0, 6).map((work, index) => (
+              {blackframeWorks.map((work, index) => (
                 <WorkCard key={index} work={work} />
               ))}
             </div>
@@ -66,7 +94,7 @@ export default function Works() {
 
           <TabsContent value="turnkey">
             <div className="flex flex-col flex-wrap justify-center sm:flex-row gap-10">
-              {turnkeyWorks.slice(0, 6).map((work, index) => (
+              {turnkeyWorks.map((work, index) => (
                 <WorkCard key={index} work={work} />
               ))}
             </div>
@@ -78,7 +106,7 @@ export default function Works() {
 
           <TabsContent value="renovations">
             <div className="flex flex-col flex-wrap justify-center sm:flex-row gap-10">
-              {renovationsWorks.slice(0, 6).map((work, index) => (
+              {renovationsWorks.map((work, index) => (
                 <WorkCard key={index} work={work} />
               ))}
             </div>
@@ -90,10 +118,22 @@ export default function Works() {
         </Tabs>
         {/* Tabs */}
 
-        {works.length > 0 && (
-          <ButtonComponent className="mt-12" text="رؤية المزيد" href="/works" />
+        {/* Loading Spinner */}
+        {hasMore && (
+          <div className="lds-grid" ref={ref}>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
         )}
+        {/* Loading Spinner */}
       </div>
-    </section>
+    </div>
   );
 }

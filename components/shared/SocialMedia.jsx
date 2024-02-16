@@ -5,7 +5,7 @@ export default function SocialMedia() {
   return (
     <div className="social-media flex flex-row lg:flex-col gap-5 sm:gap-10 items-center justify-center">
       <Link
-        href="/"
+        href="https://maps.app.goo.gl/YYPKvsPGU1u5fVxe9"
         target="_blank"
         className="sm:w-[24px] sm:h-[24px] w-[20px] h-[20px] flex justify-center relative">
         <Image
@@ -17,7 +17,7 @@ export default function SocialMedia() {
       </Link>
 
       <Link
-        href="https://www.snapchat.com/"
+        href="https://www.snapchat.com/add/fateh.alden94"
         target="_blank"
         className="sm:w-[24px] sm:h-[24px] w-[20px] h-[20px] flex justify-center relative">
         <Image
@@ -29,7 +29,7 @@ export default function SocialMedia() {
       </Link>
 
       <Link
-        href="https://www.instagram.com/"
+        href="https://www.instagram.com/alnahdakw/"
         target="_blank"
         className="sm:w-[24px] sm:h-[24px] w-[20px] h-[20px] flex justify-center relative">
         <Image
@@ -53,7 +53,7 @@ export default function SocialMedia() {
       </Link>
 
       <Link
-        href="/"
+        href="tel:+96550464650"
         className="sm:w-[24px] sm:h-[24px] w-[20px] h-[20px] flex justify-center relative">
         <Image
           src="/assets/call-gray.svg"
@@ -64,7 +64,7 @@ export default function SocialMedia() {
       </Link>
 
       <Link
-        href="/"
+        href="mailto:fatehalden6@gmail.com"
         className="sm:w-[24px] sm:h-[24px] w-[20px] h-[20px] flex justify-center relative">
         <Image
           src="/assets/message-gray.svg"

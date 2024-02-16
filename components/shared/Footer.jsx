@@ -14,48 +14,64 @@ export default function Footer() {
             {/* Contact Links Wrapper */}
             <div className="flex flex-col gap-5">
               <ul className="flex flex-col gap-7 items-center md:items-start">
-                <li className="footer-link">
-                  <div className="h-6 w-6 relative">
-                    <Image src="/assets/call-primary.svg" alt="call" fill />
-                  </div>
-                  <span className="text-gray-300 text-small-semibold">
-                    50464650
-                  </span>
+                <li>
+                  <Link
+                    href="tel:+96550464650"
+                    target="_blank"
+                    className="footer-link">
+                    <Image
+                      src="/assets/call-primary.svg"
+                      alt="call"
+                      height={24}
+                      width={24}
+                    />
+                    <span className="text-gray-300 text-small-semibold">
+                      +96550464650
+                    </span>
+                  </Link>
                 </li>
 
-                <li className="footer-link">
-                  <div className="h-6 w-6 relative">
+                <li>
+                  <Link
+                    href="mailto:fatehalden6@gmail.com"
+                    target="_blank"
+                    className="footer-link">
                     <Image
                       src="/assets/message-primary.svg"
                       alt="message"
-                      fill
+                      height={24}
+                      width={24}
                     />
-                  </div>
-                  <span className="text-gray-300 text-small-semibold">
-                    fatehalden6@gmail.com
-                  </span>
+                    <span className="text-gray-300 text-small-semibold">
+                      fatehalden6@gmail.com
+                    </span>
+                  </Link>
                 </li>
 
-                <li className="footer-link">
-                  <div className="h-6 w-6 relative">
+                <li>
+                  <Link
+                    href="https://maps.app.goo.gl/YYPKvsPGU1u5fVxe9"
+                    target="_blank"
+                    className="footer-link">
                     <Image
                       src="/assets/location-primary.svg"
                       alt="location"
-                      fill
+                      height={24}
+                      width={24}
                     />
-                  </div>
-                  <span className="text-gray-300 text-small-semibold">
-                    الضجيج - مجمع بوبيان -
-                    <br />
-                    مبنى رقم 72 - ميزانين مكتب رقم 28
-                  </span>
+                    <span className="text-gray-300 text-small-semibold">
+                      الضجيج - مجمع بوبيان -
+                      <br />
+                      مبنى رقم 72 - ميزانين مكتب رقم 28
+                    </span>
+                  </Link>
                 </li>
               </ul>
 
               <ul className="flex items-center gap-10">
                 <li className="footer-link">
                   <Link
-                    href="https://www.snapchat.com/"
+                    href="https://www.snapchat.com/add/fateh.alden94"
                     className="h-6 w-6 relative">
                     <Image
                       src="/assets/snapchat-primary.svg"
@@ -67,7 +83,7 @@ export default function Footer() {
 
                 <li className="footer-link">
                   <Link
-                    href="https://www.instagram.com/"
+                    href="https://www.instagram.com/alnahdakw/"
                     className="h-6 w-6 relative">
                     <Image
                       src="/assets/instagram-primary.svg"

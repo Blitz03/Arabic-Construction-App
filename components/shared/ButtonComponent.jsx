@@ -1,15 +1,15 @@
 import Link from "next/link";
 
-export default function ButtonComponent({ content, href, className }) {
+export default function ButtonComponent({ text, href, className }) {
   return href ? (
     <Link href={href}>
       <button className={`button-primary${className ? " " + className : ""}`}>
-        {content}
+        {text}
       </button>
     </Link>
   ) : (
     <button className={`button-primary${className ? " " + className : ""}`}>
-      {content}
+      {text}
     </button>
   );
 }
