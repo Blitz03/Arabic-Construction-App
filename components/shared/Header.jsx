@@ -52,9 +52,9 @@ export default function Header() {
 
             <li>
               <Link
-                href="/"
-                target="_blank"
-                className="w-[24px] h-[24px] flex justify-center relative">
+                href="https://maps.app.goo.gl/YYPKvsPGU1u5fVxe9"
+                className="w-[24px] h-[24px] flex justify-center relative"
+                target="_blank">
                 <Image
                   src="/assets/location-primary.svg"
                   alt="location"
@@ -66,7 +66,7 @@ export default function Header() {
 
             <li>
               <Link
-                href="/"
+                href="tel:+96550464650"
                 className="w-[24px] h-[24px] flex justify-center relative">
                 <Image
                   src="/assets/call-primary.svg"

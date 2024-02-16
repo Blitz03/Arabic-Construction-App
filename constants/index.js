@@ -32,12 +32,12 @@ export const works = [
   {
     imageUrl: "/assets/works/works-01.jpg",
     alt: "أعمال الهيكل الأسود عند شركة النهضة في الكويت",
-    type: "blackframe",
+    type: "turnkey",
   },
   {
     imageUrl: "/assets/works/works-01.jpg",
     alt: "أعمال الهيكل الأسود عند شركة النهضة في الكويت",
-    type: "blackframe",
+    type: "turnkey",
   },
   {
     imageUrl: "/assets/works/works-02.jpg",

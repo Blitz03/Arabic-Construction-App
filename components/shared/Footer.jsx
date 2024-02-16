@@ -15,10 +15,7 @@ export default function Footer() {
             <div className="flex flex-col gap-5">
               <ul className="flex flex-col gap-7 items-center md:items-start">
                 <li>
-                  <Link
-                    href="tel:+96550464650"
-                    target="_blank"
-                    className="footer-link">
+                  <Link href="tel:+96550464650" className="footer-link">
                     <Image
                       src="/assets/call-primary.svg"
                       alt="call"
@@ -34,7 +31,6 @@ export default function Footer() {
                 <li>
                   <Link
                     href="mailto:fatehalden6@gmail.com"
-                    target="_blank"
                     className="footer-link">
                     <Image
                       src="/assets/message-primary.svg"
@@ -72,7 +68,8 @@ export default function Footer() {
                 <li className="footer-link">
                   <Link
                     href="https://www.snapchat.com/add/fateh.alden94"
-                    className="h-6 w-6 relative">
+                    className="h-6 w-6 relative"
+                    target="_blank">
                     <Image
                       src="/assets/snapchat-primary.svg"
                       alt="snapchat"
@@ -84,7 +81,8 @@ export default function Footer() {
                 <li className="footer-link">
                   <Link
                     href="https://www.instagram.com/alnahdakw/"
-                    className="h-6 w-6 relative">
+                    className="h-6 w-6 relative"
+                    target="_blank">
                     <Image
                       src="/assets/instagram-primary.svg"
                       alt="instagram"
@@ -96,7 +94,8 @@ export default function Footer() {
                 <li className="footer-link">
                   <Link
                     href="https://www.facebook.com/"
-                    className="h-6 w-6 relative">
+                    className="h-6 w-6 relative"
+                    target="_blank">
                     <Image
                       src="/assets/facebook-primary.svg"
                       alt="facebook"

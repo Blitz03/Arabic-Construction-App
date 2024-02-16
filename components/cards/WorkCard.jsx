@@ -6,7 +6,7 @@ export default function WorkCard({ work }) {
     <Link
       href={work.link ? work.link : ""}
       style={{ pointerEvents: work.link ? "auto" : "none" }}
-      className="h-[360px] w-full md:w-[360px] relative overflow-hidden rounded-[20px] cursor-pointer work-card"
+      className="aspect-square w-full md:w-1/3 lg:w-[380px] relative overflow-hidden rounded-[20px] cursor-pointer work-card"
       target="_blank">
       <Image
         src={work.imageUrl}

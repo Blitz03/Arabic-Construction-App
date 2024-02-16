@@ -83,17 +83,18 @@ export default function FormComponent() {
         </Alert>
       )}
 
-      <form
-        className="flex flex-col gap-7 mt-10"
-        onSubmit={handleSubmit}
-        onChange={handleChange}>
+      <form className="flex flex-col gap-7 mt-10" onSubmit={handleSubmit}>
         <div className="flex flex-col gap-5 relative">
           <input
             type="text"
             placeholder="الأسم الكامل"
             className="contact-input"
             required
+            name="name"
+            value={form.name}
+            onChange={handleChange}
           />
+
           <div className="h-[1px] w-full bg-secondary-900 rounded-full absolute bottom-0" />
         </div>
 
@@ -103,7 +104,11 @@ export default function FormComponent() {
             placeholder="الايميل"
             className="contact-input"
             required
+            name="email"
+            value={form.email}
+            onChange={handleChange}
           />
+
           <div className="h-[1px] w-full bg-secondary-900 rounded-full absolute bottom-0" />
         </div>
 
@@ -112,6 +117,9 @@ export default function FormComponent() {
           placeholder="أكتب رسالتك"
           required
           rows={10}
+          name="message"
+          value={form.message}
+          onChange={handleChange}
         />
 
         <ButtonComponent text={isLoading ? "جار الإرسال..." : "أرسل رسالتك"} />

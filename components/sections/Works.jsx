@@ -42,7 +42,7 @@ export default function Works() {
           </TabsList>
 
           <TabsContent value="all" className="w-full">
-            <div className="flex flex-col flex-wrap justify-center sm:flex-row gap-10">
+            <div className="works-wrapper">
               {works.slice(0, 6).map((work, index) => (
                 <WorkCard key={index} work={work} />
               ))}
@@ -53,7 +53,7 @@ export default function Works() {
           </TabsContent>
 
           <TabsContent value="blackframe">
-            <div className="flex flex-col flex-wrap justify-center sm:flex-row gap-10">
+            <div className="works-wrapper">
               {blackframeWorks.slice(0, 6).map((work, index) => (
                 <WorkCard key={index} work={work} />
               ))}
@@ -65,7 +65,7 @@ export default function Works() {
           </TabsContent>
 
           <TabsContent value="turnkey">
-            <div className="flex flex-col flex-wrap justify-center sm:flex-row gap-10">
+            <div className="works-wrapper">
               {turnkeyWorks.slice(0, 6).map((work, index) => (
                 <WorkCard key={index} work={work} />
               ))}
@@ -77,7 +77,7 @@ export default function Works() {
           </TabsContent>
 
           <TabsContent value="renovations">
-            <div className="flex flex-col flex-wrap justify-center sm:flex-row gap-10">
+            <div className="works-wrapper">
               {renovationsWorks.slice(0, 6).map((work, index) => (
                 <WorkCard key={index} work={work} />
               ))}
