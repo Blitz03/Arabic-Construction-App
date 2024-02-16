@@ -27,7 +27,7 @@ export const works = [
     alt: "أعمال الهيكل الأسود عند شركة النهضة في الكويت",
     type: "blackframe",
     isFeatured: true,
-    link: "https://maps.app.goo.gl/Fr9z949igjGUdZ2x7",
+    link: "https://maps.app.goo.gl/dpnmAZSGgpYB3VhZ7",
   },
   {
     imageUrl: "/assets/works/works-01.jpg",
