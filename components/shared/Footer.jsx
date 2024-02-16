@@ -23,7 +23,7 @@ export default function Footer() {
                       width={24}
                     />
                     <span className="text-gray-300 text-small-semibold">
-                      +96550464650
+                      96550464650+
                     </span>
                   </Link>
                 </li>
