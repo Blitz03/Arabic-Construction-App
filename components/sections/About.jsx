@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Subheader from "../shared/Subheader";
 import ButtonComponent from "../shared/ButtonComponent";
+import Video from "../ui/video";
 
 export default function About() {
   return (
@@ -10,14 +10,7 @@ export default function About() {
 
         {/* Content Wrapper */}
         <div className="flex flex-wrap items-center justify-center text-center lg:text-right gap-10 sm:gap-28">
-          <div className="about-image_wrapper">
-            <Image
-              src="/assets/about-01.jpg"
-              alt="حول شركة النهضة للبناء في الكويت"
-              fill
-              className="object-cover rounded-[20px]"
-            />
-          </div>
+          <Video src="/assets/about.mp4" className="about-image_wrapper" />
 
           <div className="max-w-[500px]">
             <h2 className="text-h2-mobile-bold sm:text-h2-bold sm:text-secondary-950 max-w-[500px]">
