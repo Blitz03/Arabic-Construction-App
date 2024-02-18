@@ -88,7 +88,7 @@
 } */
 
 .about-video_wrapper {
-  @apply relative w-[100%] rounded-[20px] sm:w-[300px] mt-0 sm:mt-16;
+  @apply relative w-[100%] rounded-[20px] sm:w-[400px] mt-0 sm:mt-16;
 }
 
 .paragraph {
