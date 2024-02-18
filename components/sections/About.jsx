@@ -9,8 +9,8 @@ export default function About() {
         <Subheader text="من نحن؟" />
 
         {/* Content Wrapper */}
-        <div className="flex flex-wrap items-center justify-center text-center lg:text-right gap-10 sm:gap-28">
-          <Video src="/assets/about.mp4" className="about-image_wrapper" />
+        <div className="flex flex-wrap items-center justify-center text-center lg:text-right gap-20 lg:gap-28">
+          <Video src="/assets/about.mp4" className="" />
 
           <div className="max-w-[500px]">
             <h2 className="text-h2-mobile-bold sm:text-h2-bold sm:text-secondary-950 max-w-[500px]">

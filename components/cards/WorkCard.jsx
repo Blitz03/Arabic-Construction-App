@@ -39,7 +39,7 @@ export default function WorkCard({ work }) {
               />
 
               <p className="text-center text-body-semibold text-white drop-shadow-2xl">
-                أضغط هنا لتصفح الموقع
+                اضغط هنا لتصفح الموقع
               </p>
             </div>
           )}

@@ -1,14 +1,30 @@
 import WorkCard from "../cards/WorkCard";
 import ButtonComponent from "../shared/ButtonComponent";
 import Subheader from "../shared/Subheader";
-import { works } from "@/constants";
+import { categories, works } from "@/constants";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export default function Works() {
-  const blackframeWorks = works.filter((work) => work.type === "blackframe");
-  const turnkeyWorks = works.filter((work) => work.type === "turnkey");
-  const renovationsWorks = works.filter((work) => work.type === "renovations");
-  // const fearuredWorks = works.filter((work) => work.isFeatured === true);
+  function filterWorksByCategory(category) {
+    if (category === "all") {
+      return works;
+    } else {
+      return works.filter((work) => work.category === category);
+    }
+  }
+
+  const renderWorkCards = (category) => {
+    const filteredWorks = filterWorksByCategory(category);
+
+    // Sort works by isFeatured property, placing featured works first
+    filteredWorks.sort((a, b) =>
+      a.isFeatured === b.isFeatured ? 0 : a.isFeatured ? -1 : 1
+    );
+
+    return filteredWorks
+      .slice(0, 6)
+      .map((work, index) => <WorkCard key={index} work={work} />);
+  };
 
   return (
     <section id="works">
@@ -22,77 +38,36 @@ export default function Works() {
           defaultValue="all"
           className="w-full flex flex-col items-center gap-10">
           <TabsList className="rounded-full py-8 sm:py-10 px-2 w-full xs:w-auto justify-start xs:justify-center bg-gray-200 text-gray-600">
-            <TabsTrigger value="all" className="rounded-full p-3 sm:p-5">
-              الكل
-            </TabsTrigger>
-
-            <TabsTrigger value="blackframe" className="rounded-full p-3 sm:p-5">
-              هيكل أسود
-            </TabsTrigger>
-
-            <TabsTrigger value="turnkey" className="rounded-full p-3 sm:p-5">
-              التشطيب
-            </TabsTrigger>
-
-            <TabsTrigger
-              value="renovations"
-              className="rounded-full p-3 sm:p-5">
-              الترميمات
-            </TabsTrigger>
+            {categories.map((category) => (
+              <TabsTrigger
+                key={category.value}
+                value={category.value}
+                className="rounded-full p-3 sm:p-5">
+                {category.title}
+              </TabsTrigger>
+            ))}
           </TabsList>
 
-          <TabsContent value="all" className="w-full">
-            <div className="works-wrapper">
-              {works.slice(0, 6).map((work, index) => (
-                <WorkCard key={index} work={work} />
-              ))}
-            </div>
-            {works.length === 0 && (
-              <p className="text-body-semibold">لم يتم العثور على أعمال</p>
-            )}
-          </TabsContent>
+          {categories.map((category) => (
+            <TabsContent
+              key={category.value}
+              value={category.value}
+              className="w-full">
+              <div className="works-wrapper">
+                {renderWorkCards(category.value)}
+              </div>
 
-          <TabsContent value="blackframe">
-            <div className="works-wrapper">
-              {blackframeWorks.slice(0, 6).map((work, index) => (
-                <WorkCard key={index} work={work} />
-              ))}
-            </div>
-
-            {blackframeWorks.length === 0 && (
-              <p className="text-body-semibold">لم يتم العثور على أعمال</p>
-            )}
-          </TabsContent>
-
-          <TabsContent value="turnkey">
-            <div className="works-wrapper">
-              {turnkeyWorks.slice(0, 6).map((work, index) => (
-                <WorkCard key={index} work={work} />
-              ))}
-            </div>
-
-            {turnkeyWorks.length === 0 && (
-              <p className="text-body-semibold">لم يتم العثور على أعمال</p>
-            )}
-          </TabsContent>
-
-          <TabsContent value="renovations">
-            <div className="works-wrapper">
-              {renovationsWorks.slice(0, 6).map((work, index) => (
-                <WorkCard key={index} work={work} />
-              ))}
-            </div>
-
-            {renovationsWorks.length === 0 && (
-              <p className="text-body-semibold">لم يتم العثور على أعمال</p>
-            )}
-          </TabsContent>
+              {renderWorkCards(category.value).length === 0 && (
+                <p className="text-body-semibold text-center">
+                  لم يتم العثور على أعمال
+                </p>
+              )}
+            </TabsContent>
+          ))}
         </Tabs>
         {/* Tabs */}
 
-        {works.length > 0 && (
-          <ButtonComponent className="mt-12" text="رؤية المزيد" href="/works" />
-        )}
+        <ButtonComponent className="mt-12" text="رؤية المزيد" href="/works" />
       </div>
     </section>
   );

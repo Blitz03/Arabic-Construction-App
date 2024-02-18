@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="container flex flex-wrap flex-column md:flex-row justify-center md:justify-around text-center md:text-right gap-20">
           {/* Contact */}
           <div>
-            <h3 className="text-h2-mobile-bold text-white mb-5">أتصل بنا</h3>
+            <h3 className="text-h2-mobile-bold text-white mb-5">اتصل بنا</h3>
 
             {/* Contact Links Wrapper */}
             <div className="flex flex-col gap-5">
