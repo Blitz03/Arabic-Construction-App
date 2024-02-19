@@ -116,7 +116,7 @@
 }
 
 .works-wrapper {
-  @apply flex flex-col flex-wrap justify-center sm:flex-row gap-20;
+  @apply flex flex-wrap justify-center gap-20;
 }
 
 /* Loading Spinner */

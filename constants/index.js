@@ -162,6 +162,30 @@ export const works = [
     alt: "أعمال الترميمات عند شركة النهضة في الكويت",
     category: "renovations",
   },
+  {
+    type: "video",
+    source: "/assets/works/videos/turnkey-01.mp4",
+    alt: "أعمال التشطيب عند شركة النهضة في الكويت",
+    category: "turnkey",
+  },
+  {
+    type: "video",
+    source: "/assets/works/videos/turnkey-02.mp4",
+    alt: "أعمال التشطيب عند شركة النهضة في الكويت",
+    category: "turnkey",
+  },
+  {
+    type: "video",
+    source: "/assets/works/videos/turnkey-03.mp4",
+    alt: "أعمال التشطيب عند شركة النهضة في الكويت",
+    category: "turnkey",
+  },
+  {
+    type: "video",
+    source: "/assets/works/videos/turnkey-04.mp4",
+    alt: "أعمال التشطيب عند شركة النهضة في الكويت",
+    category: "turnkey",
+  },
 ];
 
 export const qualifications = [
