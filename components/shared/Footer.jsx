@@ -74,6 +74,7 @@ export default function Footer() {
                       src="/assets/snapchat-primary.svg"
                       alt="snapchat"
                       fill
+                      className="object-contain"
                     />
                   </Link>
                 </li>
@@ -87,6 +88,7 @@ export default function Footer() {
                       src="/assets/instagram-primary.svg"
                       alt="instagram"
                       fill
+                      className="object-contain"
                     />
                   </Link>
                 </li>
@@ -100,6 +102,7 @@ export default function Footer() {
                       src="/assets/facebook-primary.svg"
                       alt="facebook"
                       fill
+                      className="object-contain"
                     />
                   </Link>
                 </li>

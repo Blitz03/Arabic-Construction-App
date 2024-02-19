@@ -83,10 +83,6 @@
   @apply min-h-[50px] min-w-[148px] sm:min-w-[170px] bg-primary-500 hover:bg-primary-500/90 transition-all text-body-semibold text-white rounded-[20px];
 }
 
-/* .about-video_wrapper {
-  @apply relative before:hidden sm:before:inline-block before:absolute before:-inset-1 before:w-[140px] before:h-[271px] w-[100%] sm:before:h-[628px] sm:before:w-[268px] rounded-[20px] sm:w-[300px] before:top-[-5%] before:right-[50%] before:bg-gray-300 before:rounded-[20px] mt-0 sm:mt-16;
-} */
-
 .about-video_wrapper {
   @apply relative w-[100%] rounded-[20px] sm:w-[400px] mt-0 sm:mt-16;
 }

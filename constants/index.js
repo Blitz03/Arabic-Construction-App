@@ -24,7 +24,7 @@ export const services = [
 export const works = [
   {
     type: "image",
-    imageUrl: "/assets/featured-01.jpg",
+    imageUrl: "/assets/works/images/featured-01.jpg",
     alt: "أعمال الهيكل الأسود عند شركة النهضة في الكويت",
     category: "blackframe",
     isFeatured: true,

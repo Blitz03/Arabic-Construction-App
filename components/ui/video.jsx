@@ -2,7 +2,7 @@
 
 import { useState, useRef } from "react";
 
-export default function Video({ width, height, src, className }) {
+export default function Video({ width, height, src, className, poster = "" }) {
   const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -19,22 +19,24 @@ export default function Video({ width, height, src, className }) {
   }
 
   return (
-    <div className="about-video_wrapper">
+    <div className={className}>
       <video
         width={width}
         height={height}
-        className={`rounded-[20px] ${className}`}
+        className="rounded-[20px]"
         controls
         preload="none"
-        poster="/assets/about-01.jpg"
-        ref={videoRef}>
+        poster={poster}
+        ref={videoRef}
+        onPlay={() => setIsPlaying(true)}
+        onPause={() => setIsPlaying(false)}>
         <source src={src} type="video/mp4" />
       </video>
 
       {!isPlaying && (
         <button
-          className="absolute z-20 transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 hidden sm:block"
-          onClick={togglePlay}>
+          onClick={togglePlay}
+          className="absolute z-20 transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 hidden sm:block">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="5em"
