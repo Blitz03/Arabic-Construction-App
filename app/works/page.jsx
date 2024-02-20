@@ -60,6 +60,7 @@ export default function Page() {
 
         {/* Tabs */}
         <Tabs
+          dir="rtl"
           defaultValue="all"
           className="w-full flex flex-col items-center gap-10">
           <TabsList className="rounded-full py-8 sm:py-10 px-2 w-full xs:w-auto justify-start xs:justify-center bg-gray-200 text-gray-600">
@@ -79,7 +80,7 @@ export default function Page() {
               key={category.value}
               value={category.value}
               className="w-full">
-              <div className="works-wrapper">
+              <div className="flex-wrapper">
                 {renderWorkCards(category.value)}
               </div>
 

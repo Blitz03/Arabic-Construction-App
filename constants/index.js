@@ -245,3 +245,5 @@ export const categories = [
     value: "renovations",
   },
 ];
+
+export const offers = ["/assets/offers-01.jpg", "/assets/offers-01.jpg"];

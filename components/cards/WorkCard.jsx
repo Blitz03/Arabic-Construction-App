@@ -7,7 +7,7 @@ export default function WorkCard({ work }) {
     <Link
       href={work.link ? work.link : ""}
       style={{ pointerEvents: work.link ? "auto" : "none" }}
-      className="aspect-square w-full md:w-1/3 lg:w-[380px] relative overflow-hidden rounded-[20px] cursor-pointer work-card"
+      className="aspect-square w-full xs:w-full sm:w-1/2 lg:w-[47%] xl:w-[340px] relative overflow-hidden rounded-[20px] cursor-pointer work-card"
       target="_blank">
       <Image
         src={work.imageUrl}
@@ -27,7 +27,7 @@ export default function WorkCard({ work }) {
       )}
 
       {work.link && (
-        <div className="flex justify-center items-center gap-2 absolute bottom-0 w-full left-1/2 transform -translate-x-1/2 p-2 bg-secondary-950">
+        <div className="flex justify-center items-center gap-2 flex-wrap absolute bottom-0 w-full left-1/2 transform -translate-x-1/2 p-2 bg-secondary-950">
           <Image
             src="/assets/location-primary.svg"
             alt="location"
@@ -45,7 +45,7 @@ export default function WorkCard({ work }) {
   ) : (
     <Video
       src={work.source}
-      className="w-1/2 sm:w-1/3 lg:w-1/4 h-full object-cover relative overflow-hidden rounded-[20px] cursor-pointer work-card"
+      className="w-full sm:w-1/2 lg:w-1/3 h-full lg:pl-10 object-cover relative overflow-hidden rounded-[20px] cursor-pointer work-card"
     />
   );
 }

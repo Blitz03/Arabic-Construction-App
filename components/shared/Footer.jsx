@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="mt-32">
       {/* Main Footer */}
       <div className="bg-footer-pattern bg-cover bg-right-top bg-no-repeat bg-secondary-950 min-h-[720px] md:min-h-[459px] p-20">
-        <div className="container flex flex-wrap flex-column md:flex-row justify-center md:justify-around text-center md:text-right gap-20">
+        <div className="container flex flex-wrap flex-column md:flex-row justify-center md:justify-between text-center md:text-right gap-20">
           {/* Contact */}
           <div>
             <h3 className="text-h2-mobile-bold text-white mb-5">اتصل بنا</h3>
@@ -64,7 +64,7 @@ export default function Footer() {
                 </li>
               </ul>
 
-              <ul className="flex items-center gap-10">
+              <ul className="flex items-center justify-center md:justify-start gap-10">
                 <li className="footer-link">
                   <Link
                     href="https://www.snapchat.com/add/fateh.alden94"
