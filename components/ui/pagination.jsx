@@ -49,7 +49,7 @@ const PaginationPrevious = ({ className, ...props }) => (
     size="default"
     className={cn("gap-1 pl-2.5 cursor-pointer", className)}
     {...props}>
-    <ChevronLeft className="h-4 w-4" />
+    <ChevronRight className="h-4 w-4" />
     <span>السابق</span>
   </PaginationLink>
 );
@@ -62,7 +62,7 @@ const PaginationNext = ({ className, ...props }) => (
     className={cn("gap-1 pr-2.5 cursor-pointer", className)}
     {...props}>
     <span>التالي</span>
-    <ChevronRight className="h-4 w-4" />
+    <ChevronLeft className="h-4 w-4" />
   </PaginationLink>
 );
 PaginationNext.displayName = "PaginationNext";

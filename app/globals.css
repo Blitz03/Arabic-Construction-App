@@ -124,7 +124,7 @@
 }
 
 .flex-wrapper {
-  @apply flex flex-wrap justify-center xl:justify-between gap-y-10 gap-x-10 xl:gap-x-0;
+  @apply flex flex-wrap items-center justify-center xl:justify-between gap-y-10 gap-x-10 xl:gap-x-0;
 }
 
 .w-calc {
