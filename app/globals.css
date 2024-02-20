@@ -80,7 +80,15 @@
 }
 
 .button-primary {
-  @apply min-h-[50px] min-w-[148px] sm:min-w-[170px] bg-primary-500 hover:bg-primary-500/90 transition-all text-body-semibold text-white rounded-[20px];
+  @apply min-h-[50px] min-w-[130px] sm:min-w-[170px] bg-primary-500 hover:bg-primary-500/90 transition-all text-small-semibold sm:text-body-semibold text-white rounded-[20px];
+}
+
+.button-secondary {
+  @apply min-h-[50px] min-w-[130px] sm:min-w-[170px] bg-transparent text-secondary-950 border-2 border-secondary-950 hover:bg-secondary-950 hover:text-white transition-all text-small-semibold sm:text-body-semibold rounded-[20px];
+}
+
+.button-white {
+  @apply min-h-[50px] min-w-[130px] sm:min-w-[170px] bg-transparent text-white border-2 border-white hover:bg-white hover:text-secondary-950 transition-all text-small-semibold sm:text-body-semibold  rounded-[20px];
 }
 
 .about-video_wrapper {

@@ -13,7 +13,7 @@ export default function Services() {
         {/* Subheading */}
 
         {/* Services Wrapper */}
-        <div className="flex flex-col flex-wrap justify-center sm:flex-row gap-10">
+        <div className="flex flex-col flex-wrap justify-center xl:justify-between sm:flex-row gap-10">
           {services.map((service, index) => (
             <ServiceCard key={index} service={service} />
           ))}

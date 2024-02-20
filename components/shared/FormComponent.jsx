@@ -122,7 +122,10 @@ export default function FormComponent() {
           onChange={handleChange}
         />
 
-        <ButtonComponent text={isLoading ? "جار الإرسال..." : "أرسل رسالتك"} />
+        <ButtonComponent
+          text={isLoading ? "جار الإرسال..." : "أرسل رسالتك"}
+          type="submit"
+        />
       </form>
     </div>
   );

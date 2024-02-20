@@ -10,7 +10,7 @@ import {
 
 export default function HamburgerMenu() {
   return (
-    <div className="md:hidden">
+    <div className="lg:hidden">
       <Sheet>
         <SheetTrigger>
           <Image
@@ -45,6 +45,12 @@ export default function HamburgerMenu() {
             <li>
               <SheetClose>
                 <a href="/#works">أعمالنا</a>
+              </SheetClose>
+            </li>
+
+            <li>
+              <SheetClose>
+                <a href="/offers">عروضنا</a>
               </SheetClose>
             </li>
 

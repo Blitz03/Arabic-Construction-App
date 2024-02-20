@@ -19,7 +19,7 @@ export default function Header() {
           </Link>
 
           {/* Links */}
-          <ul className="hidden md:flex justify-center items-center gap-12 flex-1 text-base-semibold">
+          <ul className="hidden lg:flex justify-center items-center gap-12 flex-1 text-base-semibold">
             <li>
               <Link href="/#" className="header-link">
                 القسم الرئيسي
@@ -41,6 +41,12 @@ export default function Header() {
             <li>
               <Link href="/#works" className="header-link">
                 أعمالنا
+              </Link>
+            </li>
+
+            <li>
+              <Link href="/offers" className="header-link">
+                عروضنا
               </Link>
             </li>
 

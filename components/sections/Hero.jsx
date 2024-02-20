@@ -17,7 +17,20 @@ export default function Hero() {
             </p>
           </div>
 
-          <ButtonComponent href="#works" text="أنظر الى المزيد" />
+          <div className="flex gap-5">
+            <ButtonComponent
+              text="أنظر الى المزيد"
+              className="z-1"
+              href="#works"
+            />
+
+            <ButtonComponent
+              text="عروضنا"
+              className="z-1"
+              href="/offers"
+              variant="button-white"
+            />
+          </div>
         </div>
         {/* Content Wrapper */}
 
