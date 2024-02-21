@@ -11,7 +11,6 @@ export default function Page() {
       <div className="container">
         <Subheader text="عروضنا" />
 
-        {/* Tabs */}
         <div className="flex-wrapper justify-center xl:justify-center items-center flex-col xl:gap-y-20">
           {offers.map((offer, index) => (
             <Image
@@ -24,7 +23,6 @@ export default function Page() {
             />
           ))}
         </div>
-        {/* Tabs */}
       </div>
     </div>
   );

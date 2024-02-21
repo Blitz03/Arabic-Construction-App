@@ -115,6 +115,10 @@
   display: none;
 }
 
+/* .pagination-numbers_wrapper::-webkit-scrollbar {
+  display: none;
+} */
+
 .work-card:first-child img.work-image {
   @apply object-cover;
 }

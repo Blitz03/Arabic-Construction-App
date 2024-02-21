@@ -1,6 +1,7 @@
 import {
   Pagination,
   PaginationContent,
+  PaginationEllipsis,
   PaginationItem,
   PaginationLink,
   PaginationNext,
@@ -32,22 +33,26 @@ export default function PaginationComponent({
 
   return (
     <Pagination className="mt-10">
-      <PaginationContent>
+      <PaginationContent className="overflow-x-hidden">
         {pageNumbers.length > 1 && (
           <PaginationItem>
             <PaginationPrevious onClick={handlePrevPage} />
           </PaginationItem>
         )}
 
-        {pageNumbers.map((page, idx) => (
-          <PaginationItem
-            key={idx}
-            className={currentPage === page ? "bg-neutral-100 rounded-md" : ""}>
-            <PaginationLink onClick={() => setCurrentPage(page)}>
-              {page}
-            </PaginationLink>
-          </PaginationItem>
-        ))}
+        <ul className="overflow-x-auto overflow-y-hidden scroll-smooth pagination-numbers_wrapper flex gap-1">
+          {pageNumbers.map((page, index) => (
+            <PaginationItem
+              key={index}
+              className={
+                currentPage === page ? "bg-neutral-100 rounded-md" : ""
+              }>
+              <PaginationLink onClick={() => setCurrentPage(page)}>
+                {page}
+              </PaginationLink>
+            </PaginationItem>
+          ))}
+        </ul>
 
         {pageNumbers.length > 1 && (
           <PaginationItem>
