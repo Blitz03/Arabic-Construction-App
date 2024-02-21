@@ -12,7 +12,7 @@ export default function About() {
         <div className="flex flex-wrap items-center justify-center xl:justify-start text-center xl:text-right gap-20 lg:gap-28">
           <Video
             src="/assets/about.mp4"
-            poster="/assets/about-01.jpg"
+            poster="/assets/services-01.jpg"
             className="about-video_wrapper"
           />
 
