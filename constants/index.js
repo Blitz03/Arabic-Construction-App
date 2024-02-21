@@ -186,6 +186,12 @@ export const works = [
     alt: "أعمال التشطيب عند شركة النهضة في الكويت",
     category: "turnkey",
   },
+  {
+    type: "video",
+    source: "/assets/works/videos/turnkey-04.mp4",
+    alt: "أعمال التشطيب عند شركة النهضة في الكويت",
+    category: "blackframe",
+  },
 ];
 
 export const qualifications = [
@@ -246,4 +252,4 @@ export const categories = [
   },
 ];
 
-export const offers = ["/assets/offers-01.jpg", "/assets/offers-01.jpg"];
+export const offers = ["/assets/offers-01.jpg"];

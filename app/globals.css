@@ -124,11 +124,7 @@
 }
 
 .flex-wrapper {
-  @apply flex flex-wrap items-center justify-center xl:justify-between gap-y-10 gap-x-10 xl:gap-x-0;
-}
-
-.w-calc {
-  width: calc(50% - 40px);
+  @apply flex flex-wrap items-start justify-center xl:justify-start gap-10;
 }
 
 /* Loading Spinner */
