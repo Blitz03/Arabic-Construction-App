@@ -10,21 +10,31 @@ import PaginationComponent from "@/components/shared/PaginationComponent";
 export default function Page() {
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(6);
+  const [activeCategory, setActiveCategory] = useState("all");
+  const [activeType, setActiveType] = useState("image");
 
-  function handleTabChange() {
+  function handleCategoryChange(category) {
     setCurrentPage(1);
+    setActiveCategory(category);
   }
 
-  function filterWorksByCategory(category) {
+  function handleTypeChange(type) {
+    setCurrentPage(1);
+    setActiveType(type);
+  }
+
+  function filterWorksByCategory(category, type) {
     if (category === "all") {
-      return works;
+      return works.filter((work) => work.type === type);
     } else {
-      return works.filter((work) => work.category === category);
+      return works.filter(
+        (work) => work.category === category && work.type === type
+      );
     }
   }
 
-  const renderWorkCards = (category, type) => {
-    const filteredWorks = filterWorksByCategory(category, type);
+  const renderWorkCards = () => {
+    const filteredWorks = filterWorksByCategory(activeCategory, activeType);
 
     // Sort works by isFeatured property, placing featured works first
     filteredWorks.sort((a, b) =>
@@ -32,7 +42,6 @@ export default function Page() {
     );
 
     const startIndex = (currentPage - 1) * itemsPerPage;
-
     const endIndex = startIndex + itemsPerPage;
 
     return filteredWorks
@@ -40,8 +49,8 @@ export default function Page() {
       .map((work, index) => <WorkCard key={index} work={work} />);
   };
 
-  const renderPagination = (category, type) => {
-    const filteredWorks = filterWorksByCategory(category, type);
+  const renderPagination = () => {
+    const filteredWorks = filterWorksByCategory(activeCategory, activeType);
 
     return (
       <PaginationComponent
@@ -58,7 +67,7 @@ export default function Page() {
       <div className="container">
         <Subheader text="أعمالنا" />
 
-        {/* Tabs */}
+        {/* Main Tabs */}
         <Tabs
           dir="rtl"
           defaultValue="all"
@@ -69,32 +78,53 @@ export default function Page() {
                 key={category.value}
                 value={category.value}
                 className="rounded-full p-3 sm:p-5"
-                onClick={handleTabChange}>
+                onClick={() => handleCategoryChange(category.value)}>
                 {category.title}
               </TabsTrigger>
             ))}
           </TabsList>
+
+          {/* Secondary Tabs for Type */}
+          <Tabs
+            dir="rtl"
+            defaultValue="image"
+            className="w-full flex flex-col items-center gap-10">
+            <TabsList className="rounded-full py-7 justify-start xs:justify-center bg-gray-200 text-gray-600">
+              <TabsTrigger
+                className="p-3 rounded-full"
+                value="image"
+                onClick={() => handleTypeChange("image")}>
+                الصور
+              </TabsTrigger>
+
+              <TabsTrigger
+                className="p-3 rounded-full"
+                value="video"
+                onClick={() => handleTypeChange("video")}>
+                الفيديوهات
+              </TabsTrigger>
+            </TabsList>
+          </Tabs>
+          {/* Secondary Tabs for Type */}
 
           {categories.map((category) => (
             <TabsContent
               key={category.value}
               value={category.value}
               className="w-full">
-              <div className="flex-wrapper">
-                {renderWorkCards(category.value)}
-              </div>
+              <div className="flex-wrapper">{renderWorkCards()}</div>
 
-              {renderWorkCards(category.value).length === 0 && (
+              {renderWorkCards().length === 0 && (
                 <p className="text-body-semibold text-center">
                   لم يتم العثور على أعمال
                 </p>
               )}
 
-              {renderPagination(category.value)}
+              {renderPagination()}
             </TabsContent>
           ))}
         </Tabs>
-        {/* Tabs */}
+        {/* Main Tabs */}
       </div>
     </div>
   );

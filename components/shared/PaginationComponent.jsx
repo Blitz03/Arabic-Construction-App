@@ -40,19 +40,18 @@ export default function PaginationComponent({
           </PaginationItem>
         )}
 
-        <ul className="overflow-x-auto overflow-y-hidden scroll-smooth pagination-numbers_wrapper flex gap-1">
+        <li className="overflow-x-auto overflow-y-hidden scroll-smooth pagination-numbers_wrapper flex gap-1">
           {pageNumbers.map((page, index) => (
-            <PaginationItem
+            <PaginationLink
               key={index}
               className={
                 currentPage === page ? "bg-neutral-100 rounded-md" : ""
-              }>
-              <PaginationLink onClick={() => setCurrentPage(page)}>
-                {page}
-              </PaginationLink>
-            </PaginationItem>
+              }
+              onClick={() => setCurrentPage(page)}>
+              {page}
+            </PaginationLink>
           ))}
-        </ul>
+        </li>
 
         {pageNumbers.length > 1 && (
           <PaginationItem>

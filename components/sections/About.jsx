@@ -9,7 +9,7 @@ export default function About() {
         <Subheader text="من نحن؟" />
 
         {/* Content Wrapper */}
-        <div className="flex flex-wrap items-center justify-center xl:justify-start text-center xl:text-right gap-20 lg:gap-28">
+        <div className="flex flex-wrap items-start justify-center xl:justify-start text-center xl:text-right gap-20 lg:gap-28">
           <Video
             src="/assets/about.mp4"
             poster="/assets/services-01.jpg"
