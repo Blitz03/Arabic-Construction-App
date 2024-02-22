@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import HamburgerMenu from "./HamburgerMenu";
+import Hamburger from "./Hamburger";
 import Image from "next/image";
 
 export default function Header() {
@@ -86,7 +86,7 @@ export default function Header() {
           {/* Links */}
 
           {/* Hamburger Menu */}
-          <HamburgerMenu />
+          <Hamburger />
           {/* Hamburger Menu */}
         </div>
       </div>
