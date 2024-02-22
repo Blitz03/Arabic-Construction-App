@@ -23,7 +23,7 @@ export default function Video({ width, height, src, className, poster = "" }) {
       <video
         width={width}
         height={height}
-        className="rounded-[20px] w-full"
+        className="rounded-[20px] w-full bg-white"
         controls
         preload="metadata"
         poster={poster}
