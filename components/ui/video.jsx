@@ -24,9 +24,6 @@ export default function Video({ width, height, src, className, poster = "" }) {
         width={width}
         height={height}
         className="rounded-[20px] w-full"
-        controls
-        preload="metadata"
-        poster={poster}
         ref={videoRef}
         onPlay={() => setIsPlaying(true)}
         onPause={() => setIsPlaying(false)}>
