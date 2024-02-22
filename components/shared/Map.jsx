@@ -5,7 +5,7 @@ export default function Map() {
       width="600"
       height="700"
       className="rounded-[20px] md:rounded-tr-[20px] md:rounded-br-[20px] md:rounded-tl-[0px] md:rounded-bl-[0px] flex-1 h-[400px] md:h-[700px]"
-      loading="eager"
+      loading="lazy"
       referrerPolicy="no-referrer-when-downgrade"
     />
   );
