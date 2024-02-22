@@ -12,7 +12,7 @@ export default function SocialMedia() {
           src="/assets/location-gray.svg"
           alt="location"
           fill
-          className="object-contain"
+          className="object-contain icon"
         />
       </Link>
 
@@ -24,7 +24,7 @@ export default function SocialMedia() {
           src="/assets/snapchat-gray.svg"
           alt="snapchat"
           fill
-          className="object-contain"
+          className="object-contain icon"
         />
       </Link>
 
@@ -36,7 +36,7 @@ export default function SocialMedia() {
           src="/assets/instagram-gray.svg"
           alt="instagram"
           fill
-          className="object-contain"
+          className="object-contain icon"
         />
       </Link>
 
@@ -48,7 +48,7 @@ export default function SocialMedia() {
           src="/assets/facebook-gray.svg"
           alt="facebook"
           fill
-          className="object-contain"
+          className="object-contain icon"
         />
       </Link>
 
@@ -59,7 +59,7 @@ export default function SocialMedia() {
           src="/assets/call-gray.svg"
           alt="call"
           fill
-          className="object-contain"
+          className="object-contain icon"
         />
       </Link>
 
@@ -70,7 +70,7 @@ export default function SocialMedia() {
           src="/assets/message-gray.svg"
           alt="message"
           fill
-          className="object-contain"
+          className="object-contain icon"
         />
       </Link>
     </div>

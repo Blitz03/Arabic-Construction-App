@@ -65,7 +65,7 @@ export default function Header() {
                   src="/assets/location-primary.svg"
                   alt="location"
                   fill
-                  className="object-contain"
+                  className="object-contain icon"
                 />
               </Link>
             </li>
@@ -78,7 +78,7 @@ export default function Header() {
                   src="/assets/call-primary.svg"
                   alt="call"
                   fill
-                  className="object-contain"
+                  className="object-contain icon"
                 />
               </Link>
             </li>

@@ -21,6 +21,7 @@ export default function Footer() {
                       alt="call"
                       height={24}
                       width={24}
+                      className="icon"
                     />
                     <span className="text-gray-300 text-small-semibold">
                       96550464650+
@@ -37,6 +38,7 @@ export default function Footer() {
                       alt="message"
                       height={24}
                       width={24}
+                      className="icon"
                     />
                     <span className="text-gray-300 text-small-semibold">
                       fatehalden6@gmail.com
@@ -54,6 +56,7 @@ export default function Footer() {
                       alt="location"
                       height={24}
                       width={24}
+                      className="icon"
                     />
                     <span className="text-gray-300 text-small-semibold">
                       الضجيج - مجمع بوبيان -
@@ -74,7 +77,7 @@ export default function Footer() {
                       src="/assets/snapchat-primary.svg"
                       alt="snapchat"
                       fill
-                      className="object-contain"
+                      className="object-contain icon"
                     />
                   </Link>
                 </li>
@@ -88,7 +91,7 @@ export default function Footer() {
                       src="/assets/instagram-primary.svg"
                       alt="instagram"
                       fill
-                      className="object-contain"
+                      className="object-contain icon"
                     />
                   </Link>
                 </li>
@@ -102,7 +105,7 @@ export default function Footer() {
                       src="/assets/facebook-primary.svg"
                       alt="facebook"
                       fill
-                      className="object-contain"
+                      className="object-contain icon"
                     />
                   </Link>
                 </li>

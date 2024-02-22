@@ -103,6 +103,14 @@
   @apply flex items-center gap-2;
 }
 
+.footer-link:hover img {
+  @apply scale-110 transition-all;
+}
+
+.icon {
+  @apply hover:scale-110 transition-all;
+}
+
 .contact-input {
   @apply bg-transparent border-0 placeholder:text-secondary-900 text-gray-200 focus:outline-none py-5;
 }

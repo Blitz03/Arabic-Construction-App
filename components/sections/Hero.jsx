@@ -21,7 +21,7 @@ export default function Hero() {
             <ButtonComponent
               text="أنظر الى المزيد"
               className="z-1"
-              href="#works"
+              href="#about"
             />
 
             <ButtonComponent
