@@ -6,7 +6,6 @@ import {
   SheetTrigger,
   SheetClose,
 } from "@/components/ui/sheet";
-import Link from "next/link";
 
 export default function HamburgerMenu() {
   return (

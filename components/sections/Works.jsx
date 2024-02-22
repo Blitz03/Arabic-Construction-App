@@ -74,7 +74,7 @@ export default function Works({
   }
 
   return (
-    <section id={isRoute ? "" : "/#works"}>
+    <section id={isRoute ? "" : "works"}>
       <div className="container text-center">
         {/* Subheading */}
         <Subheader text="أعمالنا" className="mt-16" />
