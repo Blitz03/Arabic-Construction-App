@@ -23,13 +23,16 @@ export default function Video({ width, height, src, className, poster = "" }) {
       <video
         width={width}
         height={height}
-        className="rounded-[20px] w-full bg-white"
+        className="rounded-[20px] w-full"
+        style={{ backgroundColor: "white" }}
         controls
         preload="metadata"
         poster={poster}
         ref={videoRef}
         onPlay={() => setIsPlaying(true)}
         onPause={() => setIsPlaying(false)}
+        autoPlay
+        muted
         playsInline>
         <source src={src} type="video/mp4" />
       </video>
