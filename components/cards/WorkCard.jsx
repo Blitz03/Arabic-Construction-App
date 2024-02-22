@@ -7,7 +7,7 @@ export default function WorkCard({ work }) {
     <Link
       href={work.link ? work.link : ""}
       style={{ pointerEvents: work.link ? "auto" : "none" }}
-      className="aspect-square w-full xs:w-full sm:w-1/2 lg:w-[47%] xl:w-[340px] relative overflow-hidden rounded-[20px] cursor-pointer work-card"
+      className="work-card"
       target="_blank">
       <Image
         src={work.imageUrl}
@@ -45,7 +45,7 @@ export default function WorkCard({ work }) {
   ) : (
     <Video
       src={work.source}
-      className="w-full sm:w-1/2 lg:w-[30%] relative overflow-hidden rounded-[20px] cursor-pointer work-card"
+      className="w-full sm:w-1/2 md:w-1/3 lg:w-[30%] relative overflow-hidden rounded-[20px] cursor-pointer"
     />
   );
 }

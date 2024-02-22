@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 
 import {
   Sheet,
@@ -7,6 +6,7 @@ import {
   SheetTrigger,
   SheetClose,
 } from "@/components/ui/sheet";
+import Link from "next/link";
 
 export default function HamburgerMenu() {
   return (
@@ -21,6 +21,7 @@ export default function HamburgerMenu() {
             className="object-contain"
           />
         </SheetTrigger>
+
         <SheetContent>
           {/* Links */}
           <ul className="pt-14 flex flex-col gap-5 text-secondary-950 text-body-medium">
@@ -62,7 +63,7 @@ export default function HamburgerMenu() {
 
             <li>
               <SheetClose>
-                <a href="/#" className="flex items-center gap-5">
+                <a href="tel:+96550464650" className="flex items-center gap-5">
                   الأتصال
                   <Image
                     src="/assets/call-gray.svg"
@@ -77,7 +78,10 @@ export default function HamburgerMenu() {
 
             <li>
               <SheetClose>
-                <a href="/#contact" className="flex items-center gap-5">
+                <a
+                  href="https://maps.app.goo.gl/YYPKvsPGU1u5fVxe9"
+                  className="flex items-center gap-5"
+                  target="_blank">
                   الموقع
                   <Image
                     src="/assets/location-gray.svg"
