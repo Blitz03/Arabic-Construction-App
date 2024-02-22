@@ -31,10 +31,11 @@ export default function Video({ width, height, src, className, poster = "" }) {
         ref={videoRef}
         onPlay={() => setIsPlaying(true)}
         onPause={() => setIsPlaying(false)}
-        src={src}
+        autoPlay
         muted
-        playsInline
-      />
+        playsInline>
+        <source src={src} type="video/mp4" />
+      </video>
 
       {!isPlaying && (
         <button
