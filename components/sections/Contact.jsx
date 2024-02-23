@@ -1,6 +1,6 @@
 import FormComponent from "../shared/FormComponent";
 import Map from "../shared/Map";
-import SocialBar from "../shared/SocialBar";
+import ContactBar from "../shared/ContactBar";
 import Subheader from "../shared/Subheader";
 
 export default function Contact() {
@@ -18,7 +18,7 @@ export default function Contact() {
           {/* Contact Form */}
           <div className="flex items-center flex-wrap justify-center flex-column sm:flex-row">
             {/* Social Media Bar */}
-            <SocialBar />
+            <ContactBar />
             {/* Social Media Bar */}
 
             <FormComponent />

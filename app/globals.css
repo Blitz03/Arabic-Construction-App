@@ -91,10 +91,6 @@
   @apply min-h-[50px] min-w-[130px] sm:min-w-[170px] bg-transparent text-white border-2 border-white hover:bg-white hover:text-secondary-950 transition-all text-small-semibold sm:text-body-semibold  rounded-[20px];
 }
 
-.about-video_wrapper {
-  @apply relative w-[100%] rounded-[20px] sm:w-[400px];
-}
-
 .paragraph {
   @apply text-base-regular sm:text-body-semibold text-gray-500 leading-8;
 }
@@ -115,7 +111,7 @@
   @apply bg-transparent border-0 placeholder:text-secondary-900 text-gray-200 focus:outline-none py-5;
 }
 
-.social-bar {
+.contact-bar {
   @apply p-5 bg-gray-300 rounded-tl-[20px] rounded-tr-[20px] lg:rounded-tr-none lg:rounded-bl-[20px] z-10 order-1 lg:order-2;
 }
 

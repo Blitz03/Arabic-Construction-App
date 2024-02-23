@@ -1,59 +1,21 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { CldVideoPlayer } from "next-cloudinary";
+import "next-cloudinary/dist/cld-video-player.css";
 
-export default function Video({ width, height, src, className, poster = "" }) {
-  const videoRef = useRef(null);
-  const [isPlaying, setIsPlaying] = useState(false);
-
-  function togglePlay() {
-    const video = videoRef.current;
-
-    if (video.paused) {
-      video.play();
-      setIsPlaying(true);
-    } else {
-      video.pause();
-      setIsPlaying(false);
-    }
-  }
-
+export default function Video({ width, src, className, logo = "" }) {
   return (
-    <div className={`video-wrapper ${className}`}>
-      <video
-        width={width}
-        height={height}
-        className="rounded-[20px] w-full"
-        style={{ backgroundColor: "white" }}
-        controls
-        preload="metadata"
-        poster={poster}
-        ref={videoRef}
-        onPlay={() => setIsPlaying(true)}
-        onPause={() => setIsPlaying(false)}
-        autoPlay
-        muted
-        playsInline>
-        <source src={src} type="video/mp4" />
-      </video>
-
-      {!isPlaying && (
-        <button
-          onClick={togglePlay}
-          className="absolute z-20 transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 hidden sm:block">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="5em"
-            height="5em"
-            viewBox="0 0 24 24"
-            className="drop-shadow-lg">
-            <path
-              fill="#e5e5e5"
-              d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2m-2 14.5v-9l6 4.5z"
-            />
-          </svg>
-        </button>
-      )}
+    <div className={`rounded-[20px] ${className ? " " + className : ""}`}>
+      <CldVideoPlayer
+        src={src}
+        className="rounded-[20px]"
+        logo={logo}
+        colors={{
+          accent: "#cd9f25",
+          base: "#151522",
+          text: "#cd9f25",
+        }}
+      />
     </div>
   );
 }

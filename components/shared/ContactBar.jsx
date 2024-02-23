@@ -1,8 +1,8 @@
 import SocialMedia from "./SocialMedia";
 
-export default function SocialBar() {
+export default function ContactBar() {
   return (
-    <div className="social-bar">
+    <div className="contact-bar">
       <SocialMedia />
     </div>
   );
