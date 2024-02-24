@@ -1,36 +1,13 @@
-"use client";
-
-import { useState } from "react";
 import Works from "@/components/sections/Works";
+import { fetchCloudinaryMedia } from "@/actions/work.actions";
 
-export default function Page() {
-  const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage] = useState(6);
-  const [activeCategory, setActiveCategory] = useState("all");
-  const [activeType, setActiveType] = useState("image");
-
-  function handleCategoryChange(category) {
-    setCurrentPage(1);
-    setActiveCategory(category);
-  }
-
-  function handleTypeChange(type) {
-    setCurrentPage(1);
-    setActiveType(type);
-  }
+export default async function Page() {
+  const cloudinaryWorks = await fetchCloudinaryMedia();
+  console.log(cloudinaryWorks);
 
   return (
     <div className="min-h-screen">
-      <Works
-        activeCategory={activeCategory}
-        activeType={activeType}
-        currentPage={currentPage}
-        setCurrentPage={setCurrentPage}
-        itemsPerPage={itemsPerPage}
-        handleCategoryChange={handleCategoryChange}
-        handleTypeChange={handleTypeChange}
-        isRoute
-      />
+      <Works cloudinaryWorks={cloudinaryWorks} isRoute />
     </div>
   );
 }

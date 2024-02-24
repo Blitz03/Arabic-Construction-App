@@ -4,15 +4,18 @@ import About from "@/components/sections/About";
 import Works from "@/components/sections/Works";
 import Contact from "@/components/sections/Contact";
 import Qualifications from "@/components/sections/Qualifications";
+import { fetchCloudinaryMedia } from "@/actions/work.actions";
 
-export default function Home() {
+export default async function Home() {
+  const cloudinaryWorks = await fetchCloudinaryMedia();
+
   return (
     <>
       <Hero />
       <About />
       <Services />
       <Qualifications />
-      <Works />
+      <Works cloudinaryWorks={cloudinaryWorks} />
       <Contact />
     </>
   );

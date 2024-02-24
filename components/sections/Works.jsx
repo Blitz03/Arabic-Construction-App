@@ -1,3 +1,7 @@
+"use client";
+
+import { useState } from "react";
+
 import WorkCard from "../cards/WorkCard";
 import ButtonComponent from "../shared/ButtonComponent";
 import Subheader from "../shared/Subheader";
@@ -5,30 +9,44 @@ import { categories, works } from "@/constants";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import PaginationComponent from "../shared/PaginationComponent";
 
-export default function Works({
-  activeCategory,
-  activeType,
-  currentPage,
-  setCurrentPage,
-  itemsPerPage,
-  handleCategoryChange,
-  handleTypeChange,
-  isRoute,
-}) {
+export default function Works({ cloudinaryWorks, isRoute }) {
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage] = useState(6);
+  const [activeCategory, setActiveCategory] = useState("all");
+  const [activeType, setActiveType] = useState("image");
+
+  function handleCategoryChange(category) {
+    setCurrentPage(1);
+    setActiveCategory(category);
+  }
+
+  function handleTypeChange(type) {
+    setCurrentPage(1);
+    setActiveType(type);
+  }
+
   function filterWorksByCategory(category, type) {
     if (isRoute) {
       if (category === "all") {
-        return works.filter((work) => work.type === type);
+        return cloudinaryWorks
+          ? cloudinaryWorks.filter((work) => work.type === type)
+          : works.filter((work) => work.type === type);
       } else {
-        return works.filter(
-          (work) => work.category === category && work.type === type
-        );
+        return cloudinaryWorks
+          ? cloudinaryWorks.filter(
+              (work) => work.category === category && work.type === type
+            )
+          : works.filter(
+              (work) => work.category === category && work.type === type
+            );
       }
     } else {
       if (category === "all") {
-        return works;
+        return cloudinaryWorks ? cloudinaryWorks : works;
       } else {
-        return works.filter((work) => work.category === category);
+        return cloudinaryWorks
+          ? cloudinaryWorks.filter((work) => work.category === category)
+          : works.filter((work) => work.category === category);
       }
     }
   }
