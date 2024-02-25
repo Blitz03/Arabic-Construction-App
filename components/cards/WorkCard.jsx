@@ -3,14 +3,14 @@ import Link from "next/link";
 import Video from "../ui/video";
 
 export default function WorkCard({ work }) {
-  return work.type === "image" && work.imageUrl ? (
+  return work.type === "image" ? (
     <Link
       href={work.link ? work.link : ""}
       style={{ pointerEvents: work.link ? "auto" : "none" }}
       className="work-card"
       target="_blank">
       <Image
-        src={work.imageUrl}
+        src={work.url}
         alt={work.alt}
         fill
         className="object-cover md:object-contain rounded-[20px] hover:scale-110 transition-all work-image"
@@ -44,8 +44,8 @@ export default function WorkCard({ work }) {
     </Link>
   ) : (
     <Video
-      src={work.source}
-      className="w-full sm:w-1/2 md:w-1/3 lg:w-[30%] relative overflow-hidden rounded-[20px] cursor-pointer"
+      url={work.url}
+      className="w-full sm:w-1/2 md:w-1/3 lg:w-[30%] h-full relative overflow-hidden rounded-[20px] cursor-pointer"
     />
   );
 }

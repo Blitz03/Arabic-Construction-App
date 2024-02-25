@@ -11,24 +11,29 @@ cloudinary.config({
   secure: true,
 });
 
-export async function fetchCloudinaryMedia(category) {
-  // To search
-  // const data = await cloudinary.search
-  //   .expression(`folder=alnahda/${category}`)
-  //   .execute();
+export async function fetchCloudinaryMedia() {
+  try {
+    const data = await cloudinary.search.expression("").execute();
 
-  const data = await cloudinary.api.resources();
+    console.log(data);
 
-  const newItems = data.resources.map((resource) => {
-    return {
-      type: resource.resource_type,
-      imageUrl: resource.public_id,
-      alt: "مشاريع البناء عند شركة النهضة في الكويت",
-      category: resource.folder,
-    };
-  });
+    const newItems = data.resources.map((resource) => {
+      const folders = resource.folder.split("/");
+      const lastFolder = folders[folders.length - 1];
 
-  works.push(...newItems);
+      return {
+        type: resource.resource_type,
+        url: resource.public_id,
+        alt: "مشاريع البناء عند شركة النهضة في الكويت",
+        category: lastFolder,
+      };
+    });
 
-  return works;
+    const cloudinaryWorks = [...works, ...newItems];
+
+    return cloudinaryWorks;
+  } catch (error) {
+    console.error("Error fetching Cloudinary media:", error);
+    return [];
+  }
 }
