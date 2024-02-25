@@ -11,8 +11,8 @@ export default function About() {
         {/* Content Wrapper */}
         <div className="flex flex-wrap items-start justify-center xl:justify-start text-center xl:text-right gap-20 lg:gap-28">
           <Video
-            url="alnahda/renovations/renovations-01.mp4"
-            className="w-[350px]"
+            url="alnahda/renovations-01"
+            className="w-[350px] rounded-[20px]"
           />
 
           <div className="max-w-[500px]">

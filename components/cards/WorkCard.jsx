@@ -45,7 +45,7 @@ export default function WorkCard({ work }) {
   ) : (
     <Video
       url={work.url}
-      className="w-full sm:w-1/2 md:w-1/3 lg:w-[30%] h-full relative overflow-hidden rounded-[20px] cursor-pointer"
+      className="w-full sm:w-1/2 md:w-1/3 lg:w-[30%] relative overflow-hidden cursor-pointer"
     />
   );
 }

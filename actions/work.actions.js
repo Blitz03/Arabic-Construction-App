@@ -13,19 +13,17 @@ cloudinary.config({
 
 export async function fetchCloudinaryMedia() {
   try {
-    const data = await cloudinary.search.expression("").execute();
-
-    console.log(data);
+    const data = await cloudinary.search.expression("folder=alnahda").execute();
 
     const newItems = data.resources.map((resource) => {
-      const folders = resource.folder.split("/");
-      const lastFolder = folders[folders.length - 1];
+      const name = resource.filename.split("-");
+      const firstWord = name[0];
 
       return {
         type: resource.resource_type,
         url: resource.public_id,
-        alt: "مشاريع البناء عند شركة النهضة في الكويت",
-        category: lastFolder,
+        alt: "مشاريع البناء شركة النهضة في الكويت",
+        category: firstWord,
       };
     });
 
