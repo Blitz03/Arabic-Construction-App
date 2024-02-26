@@ -10,6 +10,7 @@ export default function Video({ url, className }) {
         colors={{
           accent: "#cd9f25",
         }}
+        className="rounded-[20px]"
         src={url}
         key={url}
       />

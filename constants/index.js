@@ -25,7 +25,7 @@ export const works = [
   {
     type: "image",
     url: "/assets/works/images/featured-01.jpg",
-    alt: "أعمال الهيكل الأسود عند شركة النهضة في الكويت",
+    alt: "أعمال البناء شركة النهضة في الكويت",
     category: "blackframe",
     isFeatured: true,
     link: "https://maps.app.goo.gl/dpnmAZSGgpYB3VhZ7",

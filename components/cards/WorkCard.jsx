@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import Video from "../ui/video";
 
+import { CldImage } from "next-cloudinary";
+
 export default function WorkCard({ work }) {
   return work.type === "image" ? (
     <Link
@@ -9,12 +11,21 @@ export default function WorkCard({ work }) {
       style={{ pointerEvents: work.link ? "auto" : "none" }}
       className="work-card"
       target="_blank">
-      <Image
-        src={work.url}
-        alt={work.alt}
-        fill
-        className="object-cover md:object-contain rounded-[20px] hover:scale-110 transition-all work-image"
-      />
+      {work.isFeatured ? (
+        <Image
+          src={work.url}
+          alt={work.alt}
+          fill
+          className="object-cover rounded-[20px] hover:scale-110 transition-all work-image"
+        />
+      ) : (
+        <CldImage
+          src={work.url}
+          alt={work.alt}
+          fill
+          className="object-cover rounded-[20px] hover:scale-110 transition-all work-image"
+        />
+      )}
 
       {work.isFeatured && (
         <Image
