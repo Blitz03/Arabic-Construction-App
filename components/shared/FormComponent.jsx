@@ -28,9 +28,9 @@ export default function FormComponent() {
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
-          to_name: "Fatehalden",
+          to_name: "شركة النهضة",
           from_email: form.email,
-          to_email: "novablitz03@gmail.com",
+          to_email: "fatehalden6@gmail.com",
           message: form.message,
         },
         process.env.NEXT_PUBLIC_EMAILJS_KEY
