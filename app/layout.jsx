@@ -1,5 +1,6 @@
 import { Cairo as FontSans } from "next/font/google";
 import "./globals.css";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 import Header from "@/components/shared/Header";
 import Footer from "@/components/shared/Footer";
@@ -22,21 +23,6 @@ export default function RootLayout({ children }) {
     <html lang="ar" dir="rtl">
       <head>
         <script
-          async
-          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}`}
-        />
-
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-          window.dataLayer = window.dataLayer || []; function gtag()
-          {dataLayer.push(arguments)}
-          gtag('js', new Date()); gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}');
-          `,
-          }}
-        />
-
-        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: addBusinessJsonLd() }}
           key="localbusiness-jsonld"
@@ -54,6 +40,8 @@ export default function RootLayout({ children }) {
 
         <Footer />
       </body>
+
+      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID} />
     </html>
   );
 }
