@@ -1,5 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
+
+import { links } from "@/constants";
 
 export default function Footer() {
   return (
@@ -11,7 +13,6 @@ export default function Footer() {
           <div>
             <h3 className="text-h2-mobile-bold text-white mb-5">اتصل بنا</h3>
 
-            {/* Contact Links Wrapper */}
             <div className="flex flex-col gap-5">
               <ul className="flex flex-col gap-7 items-center md:items-start">
                 <li>
@@ -112,7 +113,6 @@ export default function Footer() {
               </ul>
             </div>
           </div>
-          {/* Contact Links Wrapper */}
           {/* Contact */}
 
           {/* Services */}
@@ -152,45 +152,15 @@ export default function Footer() {
             <h3 className="text-h2-mobile-bold text-white mb-5">الأقسام</h3>
 
             <ul className="flex flex-col gap-7">
-              <li className="text-gray-300 text-small-semibold">
-                <Link
-                  href="/#"
-                  className="hover:text-primary-500 transition-all">
-                  القسم الرئيسي
-                </Link>
-              </li>
-
-              <li className="text-gray-300 text-small-semibold">
-                <Link
-                  href="/#services"
-                  className="hover:text-primary-500 transition-all">
-                  الخدمات
-                </Link>
-              </li>
-
-              <li className="text-gray-300 text-small-semibold">
-                <Link
-                  href="/#about"
-                  className="hover:text-primary-500 transition-all">
-                  من نحن؟
-                </Link>
-              </li>
-
-              <li className="text-gray-300 text-small-semibold">
-                <Link
-                  href="/#works"
-                  className="hover:text-primary-500 transition-all">
-                  أعمالنا
-                </Link>
-              </li>
-
-              <li className="text-gray-300 text-small-semibold">
-                <Link
-                  href="/#contact"
-                  className="hover:text-primary-500 transition-all">
-                  تواصل معنا
-                </Link>
-              </li>
+              {links.map((link, index) => (
+                <li className="text-gray-300 text-small-semibold" key={index}>
+                  <Link
+                    href={link.href}
+                    className="hover:text-primary-500 transition-all">
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
           {/* Sections */}

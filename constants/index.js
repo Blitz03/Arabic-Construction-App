@@ -1,3 +1,12 @@
+export const links = [
+  { name: "القسم الرئيسي", href: "/#" },
+  { name: "خدماتنا", href: "/#services" },
+  { name: "من نحن", href: "/#about" },
+  { name: "أعمالنا", href: "/#works" },
+  { name: "عروضنا", href: "/offers" },
+  { name: "تواصل معنا", href: "/#contact" },
+];
+
 export const services = [
   {
     title: "هيكل أسود:",
