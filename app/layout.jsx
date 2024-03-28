@@ -22,8 +22,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="ar" dir="rtl">
       <head>
-        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID} />
-
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: addBusinessJsonLd() }}
@@ -42,6 +40,8 @@ export default function RootLayout({ children }) {
 
         <Footer />
       </body>
+
+      <GoogleAnalytics gaId="G-ZX7BZG6X69" />
     </html>
   );
 }
