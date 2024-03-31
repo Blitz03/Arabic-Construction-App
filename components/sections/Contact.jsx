@@ -1,16 +1,27 @@
+"use client";
+
+import { useGSAP } from "@gsap/react";
+
 import FormComponent from "../shared/FormComponent";
 import Map from "../shared/Map";
 import ContactBar from "../shared/ContactBar";
 import Subheader from "../shared/Subheader";
+import { animateContact } from "@/lib/animations";
 
 export default function Contact() {
+  useGSAP(() => {
+    animateContact();
+  }, []);
+
   return (
     <section id="contact" className="py-10">
       <div className="container">
         <Subheader text="تواصل معنا" />
 
         {/* Wrapper */}
-        <div className="flex flex-wrap items-center gap-10 lg:gap-0">
+        <div
+          id="contact-wrapper"
+          className="flex flex-wrap items-center gap-10 lg:gap-0">
           {/* Map */}
           <Map />
           {/* Map */}

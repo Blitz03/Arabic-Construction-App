@@ -2,7 +2,9 @@ import Image from "next/image";
 
 export default function ServiceCard({ service }) {
   return (
-    <div className="flex flex-col gap-5 xs:w-full sm:w-1/2 lg:w-[47%] xl:max-w-[340px] text-center">
+    <div
+      id="service-card"
+      className="flex flex-col gap-5 xs:w-full sm:w-1/2 lg:w-[47%] xl:max-w-[340px] text-center">
       {/* Image Wrapper */}
       <div className="aspect-square relative">
         <Image

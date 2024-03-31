@@ -1,8 +1,17 @@
+"use client";
+
+import { useGSAP } from "@gsap/react";
+
 import Subheader from "../shared/Subheader";
 import ButtonComponent from "../shared/ButtonComponent";
 import Video from "../ui/video";
+import { animateAbout } from "@/lib/animations";
 
 export default function About() {
+  useGSAP(() => {
+    animateAbout();
+  }, []);
+
   return (
     <section className="py-10" id="about">
       <div className="container">
@@ -11,11 +20,12 @@ export default function About() {
         {/* Content Wrapper */}
         <div className="flex flex-wrap items-start justify-center xl:justify-start text-center xl:text-right gap-20 lg:gap-28">
           <Video
+            id="about-video"
             url="alnahda/renovations-01"
             className="w-[350px] rounded-[20px]"
           />
 
-          <div className="max-w-[500px]">
+          <div id="about-text" className="max-w-[500px]">
             <h2 className="text-h2-mobile-bold sm:text-h2-bold sm:text-secondary-950 max-w-[500px]">
               <span className="text-h1-mobile-bold sm:text-h1-bold text-primary-500">
                 شركة

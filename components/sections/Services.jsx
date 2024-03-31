@@ -1,8 +1,17 @@
+"use client";
+
+import { useGSAP } from "@gsap/react";
+
 import ServiceCard from "../cards/ServiceCard";
 import Subheader from "../shared/Subheader";
 import { services } from "@/constants";
+import { animateBoxes } from "@/lib/animations";
 
 export default function Services() {
+  useGSAP(() => {
+    animateBoxes("service-card");
+  }, []);
+
   return (
     <section className="relative" id="services">
       <div className="bg-services-pattern bg-contain bg-center bg-no-repeat min-h-[1817px] w-full absolute top-0 left-0 z-[-1]" />

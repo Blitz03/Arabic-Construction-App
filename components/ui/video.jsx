@@ -3,9 +3,11 @@
 import { CldVideoPlayer } from "next-cloudinary";
 import "next-cloudinary/dist/cld-video-player.css";
 
-export default function Video({ url, className }) {
+export default function Video({ url, className, id = "" }) {
   return (
-    <div className={`rounded-[20px]${className ? " " + className : ""}`}>
+    <div
+      id={id}
+      className={`rounded-[20px]${className ? " " + className : ""}`}>
       <CldVideoPlayer
         colors={{
           accent: "#cd9f25",

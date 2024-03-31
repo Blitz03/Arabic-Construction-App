@@ -7,6 +7,7 @@ import { CldImage } from "next-cloudinary";
 export default function WorkCard({ work }) {
   return work.type === "image" ? (
     <Link
+      id="work-card"
       href={work.link ? work.link : ""}
       style={{ pointerEvents: work.link ? "auto" : "none" }}
       className="work-card"
@@ -55,6 +56,7 @@ export default function WorkCard({ work }) {
     </Link>
   ) : (
     <Video
+      id="work-card"
       url={work.url}
       className="w-full sm:w-1/2 md:w-1/3 lg:w-[30%] relative overflow-hidden cursor-pointer"
     />

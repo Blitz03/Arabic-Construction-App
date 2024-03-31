@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useGSAP } from "@gsap/react";
 
 import WorkCard from "../cards/WorkCard";
 import ButtonComponent from "../shared/ButtonComponent";
@@ -8,12 +9,19 @@ import Subheader from "../shared/Subheader";
 import { categories, works } from "@/constants";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import PaginationComponent from "../shared/PaginationComponent";
+import { animateBoxes, animateWorks } from "@/lib/animations";
 
 export default function Works({ cloudinaryWorks, isRoute }) {
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(6);
   const [activeCategory, setActiveCategory] = useState("all");
   const [activeType, setActiveType] = useState("image");
+
+  useGSAP(() => {
+    animateBoxes("work-card", "works");
+
+    animateWorks();
+  }, []);
 
   function handleCategoryChange(category) {
     setCurrentPage(1);
@@ -90,9 +98,8 @@ export default function Works({ cloudinaryWorks, isRoute }) {
       />
     );
   }
-
   return (
-    <section id={isRoute ? "" : "works"}>
+    <section id="works">
       <div className="container text-center">
         {/* Subheading */}
         <Subheader text="أعمالنا" className="mt-16" />
@@ -100,6 +107,7 @@ export default function Works({ cloudinaryWorks, isRoute }) {
 
         {/* Tabs */}
         <Tabs
+          id="work-tabs"
           dir="rtl"
           defaultValue="all"
           className="w-full flex flex-col items-center gap-10">
@@ -127,6 +135,7 @@ export default function Works({ cloudinaryWorks, isRoute }) {
           {/* Secondary Tabs for Type */}
           {isRoute && (
             <Tabs
+              id="work-tabs"
               dir="rtl"
               defaultValue="image"
               className="w-full flex flex-col items-center gap-10">

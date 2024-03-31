@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 export default function ButtonComponent({
+  id = "",
   text,
   href,
   className,
@@ -8,13 +9,14 @@ export default function ButtonComponent({
   variant = "button-primary",
 }) {
   return href ? (
-    <Link href={href}>
+    <Link href={href} id={id}>
       <button className={`${variant}${className ? " " + className : ""}`}>
         {text}
       </button>
     </Link>
   ) : (
     <button
+      id={id}
       className={`${variant}${className ? " " + className : ""}`}
       type={type}>
       {text}
