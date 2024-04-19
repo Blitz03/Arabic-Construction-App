@@ -25,6 +25,7 @@ export default function Subheader({ text, className }) {
             y: 0,
             opacity: 1,
             duration: 1,
+            delay: 0.7,
             ease: "bounce",
             scrollTrigger: subheader,
           }
