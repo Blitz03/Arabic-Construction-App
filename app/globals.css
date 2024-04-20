@@ -71,7 +71,7 @@
     @apply border-border;
   }
 
-  *:not(html, body) {
+  *:not(html, body, #services, #qualifications > div div:last-child div) {
     @apply overflow-hidden;
   }
 
